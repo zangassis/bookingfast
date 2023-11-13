@@ -13,10 +13,10 @@ public class ReservationsService : IReservationsService
         _reservationsRepository = reservationsRepository;
     }
 
-    public async Task<ReservationResponse> FindAllReservations()
+    public async Task<List<ReservationDto>> FindAllReservations()
     {
         var reservations = await _reservationsRepository.FindAllReservations();
-        return new ReservationResponse(reservations);
+        return reservations.Select(reservation => new ReservationDto(reservation)).ToList();
     }
 
     public async Task CreateNewReservation(ReservationDto reservation)

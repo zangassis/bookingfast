@@ -8,15 +8,15 @@ namespace BookingFast.UI.Controllers;
 [Route("[controller]")]
 public class ReservationsController : Controller
 {
-    private readonly ReservationsService _reservationsService;
+    private readonly IReservationsService _reservationsService;
 
-    public ReservationsController(ReservationsService reservationsService)
+    public ReservationsController(IReservationsService reservationsService)
     {
         _reservationsService = reservationsService;
     }
 
     [HttpGet]
-    public async Task<ActionResult<ReservationResponse>> FindAllReservations()
+    public async Task<ActionResult<List<ReservationDto>>> FindAllReservations()
     {
         var reservations = await _reservationsService.FindAllReservations();
         return Ok(reservations);
