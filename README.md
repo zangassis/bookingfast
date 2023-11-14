@@ -1,7 +1,6 @@
 # BookingFast 🚀
 
-**This project contains a sample ASP.NET Core app. This app is an example of the article I produced for the Telerik Blog (telerik.com/blogs).
-**
+**This project contains a sample ASP.NET Core app. This app is an example of the article I produced for the Telerik Blog (telerik.com/blogs).**
 
 Welcome to BookingFast, a project utilizing the Onion Architecture pattern to build a robust and scalable booking system.
 
